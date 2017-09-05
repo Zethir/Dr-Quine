@@ -6,7 +6,7 @@
 #    By: cboussau <marvin@42.fr>                    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2017/09/04 20:17:56 by cboussau          #+#    #+#              #
-#    Updated: 2017/09/05 16:57:03 by cboussau         ###   ########.fr        #
+#    Updated: 2017/09/05 18:42:42 by cboussau         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -48,7 +48,7 @@ $(NAME3): $(OBJ)
 clean:
 	rm -rf $(OBJ)
 	rm -rf Grace_kid.cpp Sully_0.cpp Sully_1.cpp Sully_2.cpp Sully_3.cpp \
-		Sully_4.cpp Sully_0 Sully_1 Sully_2 Sully_3 Sully_4
+		Sully_4.cpp Sully_5.cpp Sully_0 Sully_1 Sully_2 Sully_3 Sully_4 Sully_5
 	echo "\\033[31mObjects files has been removed !\\033[0;39m"
 
 fclean: clean
