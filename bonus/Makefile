@@ -6,7 +6,7 @@
 #    By: cboussau <marvin@42.fr>                    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2017/09/04 20:17:56 by cboussau          #+#    #+#              #
-#    Updated: 2017/09/05 16:48:58 by cboussau         ###   ########.fr        #
+#    Updated: 2017/09/05 16:57:03 by cboussau         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -16,9 +16,9 @@ NAME2 = Grace
 
 NAME3 = Sully
 
-SRC = src/Colleen.c src/Grace.c src/Sully.c
+SRC = src/Colleen.cpp src/Grace.cpp src/Sully.cpp
 
-OBJ = $(SRC:.c=.o)
+OBJ = $(SRC:.cpp=.o)
 
 FLAGS = -Wall -Wextra -Werror
 
@@ -28,27 +28,27 @@ all: $(NAME) $(NAME2) $(NAME3)
 
 $(NAME): $(OBJ)
 		echo "\\033[1;34mCompiling Colleen...\\033[0;39m"
-		gcc $(FLAGS) -o $(NAME) src/Colleen.o
+		g++ $(FLAGS) -o $(NAME) src/Colleen.o
 		echo "\\033[32m$(NAME) has been created !\\033[0;39m"
 
 $(NAME2): $(OBJ)
 		echo "\\033[1;34mCompiling Grace...\\033[0;39m"
-		gcc $(FLAGS) -o $(NAME2) src/Grace.o
+		g++ $(FLAGS) -o $(NAME2) src/Grace.o
 		echo "\\033[32m$(NAME2) has been created !\\033[0;39m"
 
 $(NAME3): $(OBJ)
 		echo "\\033[1;34mCompiling Sully...\\033[0;39m"
-		gcc $(FLAGS) -o $(NAME3) src/Sully.o
+		g++ $(FLAGS) -o $(NAME3) src/Sully.o
 		echo "\\033[32m$(NAME3) has been created !\\033[0;39m"
 
 %.o: $.c
-	gcc $(FLAGS) -o $@ -c $<
+	g++ $(FLAGS) -o $@ -c $<
 	echo "\\033[1;34mGenerating objects... PLease wait\\033[0;39m"
 
 clean:
 	rm -rf $(OBJ)
-	rm -rf Grace_kid.c Sully_0.c Sully_1.c Sully_2.c Sully_3.c Sully_4.c \
-		Sully_0 Sully_1 Sully_2 Sully_3 Sully_4
+	rm -rf Grace_kid.cpp Sully_0.cpp Sully_1.cpp Sully_2.cpp Sully_3.cpp \
+		Sully_4.cpp Sully_0 Sully_1 Sully_2 Sully_3 Sully_4
 	echo "\\033[31mObjects files has been removed !\\033[0;39m"
 
 fclean: clean
